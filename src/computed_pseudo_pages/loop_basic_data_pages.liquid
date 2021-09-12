@@ -1,0 +1,14 @@
+---js
+{
+  // Thank you, https://github.com/brob/sanity-template-11ty-mixnmatch-blog/blob/main/template/web/sanityPost.md
+  layout: "layouts/basic_page.liquid",
+  pagination: {
+      alias: "documentData",
+      data: "databasics",
+      size: 1,
+      addAllPagesToCollections: true,
+  },
+  tags: ["pages"],
+  permalink: "{{ documentData.theslug }}/index.html"
+}
+---
