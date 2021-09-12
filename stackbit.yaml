@@ -5,6 +5,7 @@ buildCommand: npm run build
 publishDir: dist
 
 pagesDir: src/markdown
+dataDir: src/_data
 uploadDir: src/static/uploads
 
 assets:
@@ -14,6 +15,19 @@ assets:
   uploadDir: src/static/uploads
 
 models:
+  databasicpage:
+    type: data
+    file: 'databasics.json'
+    label: BasicPage Data
+    isList: true
+    items:
+      type: object
+      labelField: theslug
+      fields:
+        - type: slug
+          name: theslug
+        - type: string
+          name: message
   basicpage:
     type: page
     label: Basic Page
